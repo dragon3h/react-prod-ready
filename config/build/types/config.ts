@@ -3,10 +3,11 @@ export type BuildMode = 'production' | 'development';
 export interface BuildPath {
   entry: string;
   build: string;
-  thiml: string;
+  html: string;
 }
 
 export interface BuildOptions {
   mode: BuildMode;
-  path: BuildPath;
+  paths: BuildPath;
+  isDev: boolean;
 }
