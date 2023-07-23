@@ -30,6 +30,6 @@ export function buildWebpackConfig(buildOptions: BuildOptions): webpack.Configur
       rules: buildLoaders(buildOptions),
     },
 
-    resolve: buildResolvers(),
+    resolve: buildResolvers(buildOptions),
   };
 }
