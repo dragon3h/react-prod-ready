@@ -4,6 +4,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import "./styles/index.scss";
 import { AboutPageAsync } from "./pages/AboutPage/AboutPageAsync";
 import { MainPageAsync } from "./pages/MainPage/MainPageAsync";
+import { classNames } from "./helpers/classNames/className";
 
 export enum Theme {
   LIGHT = 'light',
@@ -17,7 +18,7 @@ export const App = () => {
   };
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {hover: true, test: false, one: 'dfsdf'}, [theme])}>
       <button onClick={toggleTheme}>Toggle Theme</button>
 
       <Link to={"/"}>Main Page</Link>
